@@ -7,7 +7,8 @@ namespace ProyectoGrupal.Controllers
     [Route("api/[controller]")]
     public class ProductosController : ControllerBase
     {
-        private static List<Producto> productos = new();
+        // Lista pública para permitir acceso desde otros controladores/servicios
+        public static List<Producto> productos = new();
         private static int nextId = 1;
 
         [HttpGet]
