@@ -3,12 +3,10 @@ using ProyectoGrupal.DTOs;
 
 namespace ProyectoGrupal.Services
 {
-    // Servicio para obtener reportes de stock
     public class ReporteService
     {
         public IEnumerable<ReporteStockDto> GetStockReport(IEnumerable<Producto> productos)
         {
-            // Mapea los productos al DTO de reporte de stock
             return productos.Select(p => new ReporteStockDto
             {
                 Id = p.Id,
